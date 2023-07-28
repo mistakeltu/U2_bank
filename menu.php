@@ -2,7 +2,7 @@
     <ul>
         <li><a href="<?= URL ?>main.php">Home</a></li>
         <li><a href="<?= URL ?>create.php">Add account</a></li>
-        <li><a href="<?= URL ?>edit.php">Subtract money from customer account</a></li>
+        <li><a href="<?= URL ?>subtract.php">Subtract money from customer account</a></li>
         <li><a href="<?= URL ?>edit.php">Add money to customer account</a></li>
         <!-- <li><a href="<?= URL ?>delete.php">Delete customer</a></li> -->
         <?php if (isset($_SESSION['login']) && $_SESSION['login'] == 1) : ?>

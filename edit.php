@@ -45,7 +45,7 @@ $accounts = json_decode(file_get_contents(__DIR__ . '/accounts.json'), 1);
                     <td><?= $account['money'] ?></td>
                     <td>
                         <form action="<?= URL ?>update.php?id=<?= $account['id'] ?>" method="post">
-                            <input type="number" name="money" placeholder="Add money to account" value="<?= $old['money'] ?? $account['money'] ?>">
+                            <input type="number" name="money" placeholder="Add money to account" value="money">
                             <button type="submit">Add</button>
                             <a href="<?= URL ?>main.php">Cancel</a>
                         </form>
@@ -57,3 +57,5 @@ $accounts = json_decode(file_get_contents(__DIR__ . '/accounts.json'), 1);
 </div>
 
 <?php require __DIR__ . '/bottom.php' ?>
+
+<!-- ?id=<?= $account['id'] ?> -->
