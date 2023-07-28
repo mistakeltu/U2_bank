@@ -49,6 +49,11 @@ $accounts = json_decode(file_get_contents(__DIR__ . '/accounts.json'), 1);
                             <button type="submit">Add</button>
                             <a href="<?= URL ?>main.php">Cancel</a>
                         </form>
+                        <form action="<?= URL ?>minus.php?id=<?= $account['id'] ?>" method="post">
+                            <input type="number" name="money" placeholder="Subtract money from account" value="money">
+                            <button type="submit">Minus</button>
+                            <a href="<?= URL ?>main.php">Cancel</a>
+                        </form>
                     </td>
                 </tr>
             <?php endforeach ?>
