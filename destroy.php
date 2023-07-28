@@ -25,5 +25,10 @@ foreach ($accounts as $key => $acc) {
     }
 }
 
+$_SESSION['message'] = [
+    'text' => $find ? 'Person account deleted!' : 'Person not found',
+    'type' => $find ? 'green' : 'red'
+];
+
 header('Location: ' . URL . 'main.php');
 die;

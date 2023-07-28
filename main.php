@@ -1,6 +1,8 @@
 <?php
 
 require __DIR__ . '/bootstrap.php';
+
+
 if (!isset($_SESSION['login']) || $_SESSION['login'] != 1) {
 
     header('Location: ' . URL . 'index.php');
@@ -11,7 +13,7 @@ $title = 'Bank';
 require __DIR__ . '/top.php';
 ?>
 <?php require __DIR__ . '/menu.php' ?>
-
+<?php require __DIR__ . '/msg.php' ?>
 
 <div>HELLO :)</div>
 

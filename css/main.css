@@ -5,3 +5,7 @@
 /* Base css */
 
 @import "../css/base.css";
+
+/* Message css */
+
+@import "../css/msg.css";
