@@ -19,6 +19,7 @@
                 <th scope="col">Last Name</th>
                 <th scope="col">Personal Code</th>
                 <th scope="col">Money</th>
+                <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -30,6 +31,11 @@
                     <td><?= $account['lastName'] ?></td>
                     <td><?= $account['personalCode'] ?></td>
                     <td><?= $account['money'] ?></td>
+                    <td>
+                        <form action="<?= URL ?>destroy.php?id=<?= $account['id'] ?>" method="post">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
                 </tr>
             <?php endforeach ?>
         </tbody>

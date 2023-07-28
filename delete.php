@@ -8,7 +8,7 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] != 1) {
     die;
 }
 
-$title = 'Add customer';
+$title = 'Delete Customer';
 require __DIR__ . '/top.php';
 
 ?>
