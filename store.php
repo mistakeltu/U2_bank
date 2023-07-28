@@ -13,6 +13,7 @@ $lastName = $_POST['lastName'] ?? '';
 $personalCode = $_POST['personalCode'] ?? '';
 
 if ($name == '' || $accNumber == '' || $lastName == '' || $personalCode == '') {
+    $_SESSION['old_values'] = $_POST;
     header('Location: ' . URL . 'create.php');
     die;
 }
