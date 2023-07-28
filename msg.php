@@ -6,8 +6,8 @@ unset($_SESSION['message']);
 ?>
 
 <?php if ($msg) : ?>
-
-    <div class="msg" style="background: <?= $msg['type']; ?>">
+    <input type="checkbox" id="msg">
+    <div class="msg" style="background: <?= $msg['type'] ?>;" for=" msg">
         <?= $msg['text'] ?>
     </div>
 

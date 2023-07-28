@@ -29,7 +29,7 @@ require __DIR__ . '/top.php';
 
 <?php $title = 'Login'; ?>
 <div class="login-container">
-    <div class="login">
+    <div class="login" style="width: 500px; height: 300px; border: 1px solid grey;">
         <form method="post" action="<?= URL ?>index.php">
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>

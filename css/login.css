@@ -1,14 +1,11 @@
+.login {
+  border-radius: 10px;
+}
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-}
-.login {
-  background-color: antiquewhite;
-  border-radius: 10px;
-  height: 250px;
-  width: 250px;
 }
 
 .row {
