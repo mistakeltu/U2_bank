@@ -4,11 +4,12 @@ $accounts = [];
 
 $accounts[] = [
     'id' => uniqid(),
-    'accNumber',
-    'name',
-    'lastName',
-    'personalCode',
+    'accNumber' => $accNumber,
+    'name' => $name,
+    'lastName' => $lastName,
+    'personalCode' => $personalCode,
     'money' => 0
 ];
+
 
 file_put_contents(__DIR__ . '/accounts.json', json_encode($accounts));
