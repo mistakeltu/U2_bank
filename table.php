@@ -35,6 +35,9 @@
                         <form action="<?= URL ?>destroy.php?id=<?= $account['id'] ?>" method="post">
                             <button type="submit">Delete</button>
                         </form>
+                        <form action="<?= URL ?>edit.php?id=<?= $account['id'] ?>" method="post">
+                            <button type="submit">Add money</button>
+                        </form>
                     </td>
                 </tr>
             <?php endforeach ?>
