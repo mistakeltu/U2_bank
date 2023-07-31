@@ -41,7 +41,7 @@ unset($_SESSION['old_values']);
                 <label for="accNumber">Account number</label>
                 <input type="number" name="accNumber" placeholder="Account number" value="<?= $old['accNumber'] ?? '' ?>">
             </div>
-            <button type="submit">Add</button>
+            <button type="submit" class="menu-btn">Add</button>
         </div>
     </form>
 </div>

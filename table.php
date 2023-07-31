@@ -33,10 +33,10 @@
                     <td><?= $account['money'] ?></td>
                     <td>
                         <form action="<?= URL ?>destroy.php?id=<?= $account['id'] ?>" method="post">
-                            <button type="submit">Delete</button>
+                            <button type="submit" class="menu-btn">Delete</button>
                         </form>
                         <form action="<?= URL ?>edit.php?id=<?= $account['id'] ?>" method="post">
-                            <button type="submit">Edit money</button>
+                            <button type="submit" class="menu-btn">Edit money</button>
                         </form>
                         <!-- <form action="<?= URL ?>subtract.php?id=<?= $account['id'] ?>" method="post">
                             <button type="submit">Subtract money</button>
