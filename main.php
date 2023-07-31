@@ -10,8 +10,8 @@ if (!isset($_SESSION['login']) || $_SESSION['login'] != 1) {
 }
 
 $title = 'Bank';
-require __DIR__ . '/top.php';
 ?>
+<?php require __DIR__ . '/top.php' ?>
 <?php require __DIR__ . '/menu.php' ?>
 <?php require __DIR__ . '/msg.php' ?>
 

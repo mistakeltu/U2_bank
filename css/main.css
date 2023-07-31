@@ -9,3 +9,7 @@
 /* Message css */
 
 @import "../css/msg.css";
+
+/* Main style */
+
+@import "../css/bg.css";
