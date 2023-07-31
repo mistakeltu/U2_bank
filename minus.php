@@ -27,7 +27,12 @@ foreach ($accounts as $key => $acc) {
         $find = true;
         $currentMoney = $acc['money'];
         $newMoney = $currentMoney - $money;
-        $accounts[$key]['money'] = $newMoney;
+        if ($newMoney < 0) {
+            $newMoney = 0;
+        } else {
+            $accounts[$key]['money'] = $newMoney;
+        }
+
 
         $accounts[$key] = [
             'id' => uniqid(),

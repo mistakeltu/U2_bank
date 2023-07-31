@@ -46,6 +46,10 @@ $account = [
 
 $accounts[] = $account;
 
+usort($accounts, function ($a, $b) {
+    return strcmp($a['lastName'], $b['lastName']);
+});
+
 file_put_contents(__DIR__ . '/accounts.json', json_encode($accounts));
 
 $_SESSION['message'] = [

@@ -13,7 +13,7 @@
     <table class="table">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">#</th>
+                <th scope="col">Account id</th>
                 <th scope="col">Account Number</th>
                 <th scope="col">User Name</th>
                 <th scope="col">Last Name</th>
@@ -25,7 +25,7 @@
         <tbody>
             <?php foreach ($accounts as $account) : ?>
                 <tr>
-                    <th scope="row">1</th>
+                    <th scope="row"><?= $account['id'] ?></th>
                     <td><?= $account['accNumber'] ?></td>
                     <td><?= $account['name'] ?></td>
                     <td><?= $account['lastName'] ?></td>

@@ -20,6 +20,8 @@ unset($_SESSION['old_values']);
 <?php require __DIR__ . '/menu.php' ?>
 <?php require __DIR__ . '/msg.php' ?>
 
+<link rel="stylesheet" href="./css/create.css" type="text/css">
+
 <div class="add">
     <form action="<?= URL ?>store.php" method="post">
         <div>

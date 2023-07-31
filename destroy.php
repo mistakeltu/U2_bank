@@ -17,7 +17,7 @@ $accounts = json_decode(file_get_contents(__DIR__ . '/accounts.json'), 1);
 $find = false;
 
 foreach ($accounts as $key => $acc) {
-    if ($acc['id'] == $_GET['id']) {
+    if ($acc['id'] == $_GET['id'] && $acc['money'] == 0) {
         $find = true;
         unset($accounts[$key]);
         file_put_contents(__DIR__ . '/accounts.json', json_encode($accounts));
@@ -26,7 +26,7 @@ foreach ($accounts as $key => $acc) {
 }
 
 $_SESSION['message'] = [
-    'text' => $find ? 'Person account deleted!' : 'Person not found',
+    'text' => $find ? 'Person account deleted!' : 'Person not found or account have money',
     'type' => $find ? 'green' : 'red'
 ];
 
