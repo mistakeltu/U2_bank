@@ -13,10 +13,12 @@ if (!isset($_GET['id'])) {
 }
 
 $name = $_POST['name'] ?? '';
-$accNumber = $_POST['accNumber'] ?? '';
+// $accNumber = $_POST['accNumber'] ?? '';
 $lastName = $_POST['lastName'] ?? '';
-$personalCode = $_POST['personalCode'] ?? '';
+// $personalCode = $_POST['personalCode'] ?? '';
 $money = $_POST['money'] ?? '';
+$randPersonal = rand(1, 6) . rand(1, 999999) . rand(1, 999) . rand(1, 9);
+
 
 $accounts = json_decode(file_get_contents(__DIR__ . '/accounts.json'), 1);
 
@@ -31,10 +33,10 @@ foreach ($accounts as $key => $acc) {
 
         $accounts[$key] = [
             'id' => uniqid(),
-            'accNumber' => $acc['accNumber'],
+            'personalCode' => $randPersonal,
             'name' => $acc['name'],
             'lastName' => $acc['lastName'],
-            'personalCode' => $acc['personalCode'],
+            'accNumber' => 'LT' . rand(1, 999999999999999999),
             'money' => $newMoney
         ];
         file_put_contents(__DIR__ . '/accounts.json', json_encode($accounts));

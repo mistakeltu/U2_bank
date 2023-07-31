@@ -9,11 +9,13 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 }
 
 $name = $_POST['name'] ?? '';
-$accNumber = $_POST['accNumber'] ?? '';
+// $accNumber = $_POST['accNumber'] ?? '';
 $lastName = $_POST['lastName'] ?? '';
-$personalCode = $_POST['personalCode'] ?? '';
+// $randomCode = rand(999999999999999999, 999999999999999999);
+// $personalCode = $_POST['personalCode'] ?? '';
+$randPersonal = rand(1, 6) . rand(1, 999999) . rand(1, 999) . rand(1, 9);
 
-if ($name == '' || $accNumber == '' || $lastName == '' || $personalCode == '') {
+if ($name == '' || $lastName == '') {
     $_SESSION['message'] = [
         'text' => 'Laukeliai turi buti uzpildyti',
         'type' => 'red'
@@ -37,10 +39,10 @@ $accounts = json_decode(file_get_contents(__DIR__ . '/accounts.json'), 1);
 
 $account = [
     'id' => uniqid(),
-    'accNumber' => $accNumber,
+    'personalCode' => $randPersonal,
     'name' => $name,
     'lastName' => $lastName,
-    'personalCode' => $personalCode,
+    'accNumber' => 'LT' . rand(1, 999999999999999999),
     'money' => 0
 ];
 

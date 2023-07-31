@@ -33,14 +33,14 @@ unset($_SESSION['old_values']);
             <input type="text" name="lastName" placeholder="User last name" value="<?= $old['lastName'] ?? '' ?>">
         </div>
         <div>
-            <div>
+            <!-- <div>
                 <label for="personalCode">Personal code</label>
                 <input type="number" name="personalCode" placeholder="Personal code" value="<?= $old['personalCode'] ?? '' ?>">
-            </div>
-            <div>
+            </div> -->
+            <!-- <div>
                 <label for="accNumber">Account number</label>
                 <input type="number" name="accNumber" placeholder="Account number" value="<?= $old['accNumber'] ?? '' ?>">
-            </div>
+            </div> -->
             <button type="submit" class="menu-btn">Add</button>
         </div>
     </form>
