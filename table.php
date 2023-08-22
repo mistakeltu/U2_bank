@@ -10,7 +10,7 @@
     }
 
     ?>
-    <table class="table">
+    <table class="table-dark">
         <thead class="thead-dark">
             <tr>
                 <th scope="col">Account id</th>
